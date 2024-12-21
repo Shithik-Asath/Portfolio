@@ -335,16 +335,40 @@ svg {
 
 
 /*=============== ABOUT ===============*/
+/* About Section */
+.about {
+  padding: 3rem 0;
+  background-color: var(--container-color); /* Section background */
+}
+
+.about__subtitle {
+  font-size: 1.25rem;
+  color: var(--first-color);
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.about__title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about__description {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 2rem; /* Adjusted as per your style */
+  text-align: justify;
+}
+
 .about__container {
   row-gap: 2.5rem;
 }
 
 .about__data {
   text-align: center;
-}
-
-.about__description {
-  margin-bottom: 2rem;
 }
 
 .about__image {
@@ -359,6 +383,43 @@ svg {
   stroke: var(--first-color);
 }
 
+/* Button Styles */
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+  transform: translateY(-3px);
+}
+
+/* Resume Download Button */
+.resume__download {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.button--download {
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button--download:hover {
+  background-color: var(--first-color-alt);
+  transform: translateY(-3px);
+}
 
 /*=============== SKILLS ===============*/
 .skills {
@@ -407,6 +468,31 @@ svg {
   color: var(--first-color);
 }
 
+/*=============== EDUCATION ===============*/
+.education__container {
+  row-gap: 2rem;
+  padding-block: 1rem;
+}
+
+.education__card {
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 3rem 1.25rem;
+  border-radius: 1rem;
+  border: 2px solid var(--container-color);
+  transition: border .4s;
+}
+
+
+
+.education__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.5rem;
+}
+
+.education__card:hover {
+  border: 2px solid var(--first-color);
+}
 /*=============== SERVICES ===============*/
 .services__container {
   row-gap: 2rem;
@@ -437,7 +523,6 @@ svg {
 .services__card:hover {
   border: 2px solid var(--first-color);
 }
-
 /*=============== PROJECTS ===============*/
 .projects {
   background-color: var(--container-color);
@@ -823,6 +908,7 @@ svg {
   .about__description {
     margin-bottom: 3rem;
   }
+  
 
   .skills__container {
     grid-template-columns: 340px 425px;
