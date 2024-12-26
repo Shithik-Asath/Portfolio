@@ -37,8 +37,7 @@ const blurHeader = () => {
 window.addEventListener('scroll', blurHeader);
 
 /*=============== EMAIL JS ===============*/
-const contactForm = document.getElementById('contact-form'),
-      contactMessage = document.getElementById('contact-message');
+const contactForm = document.getElementById('contact-form');
 
 const sendEmail = (e) => {
     e.preventDefault();
@@ -46,28 +45,19 @@ const sendEmail = (e) => {
     // Sending the form using emailjs
     emailjs.sendForm('service_j1i6cx4', 'template_3iciddt', '#contact-form', 'jihOkX57m1SdPwwVP')
     .then(() => {
-        // Show success message
-        contactMessage.textContent = 'Message sent successfully';
-
-        // Remove message after five seconds
-        setTimeout(() => {
-            contactMessage.textContent = '';
-        }, 5000);
+        // Show success popup
+        alert('Message sent successfully!');
 
         // Clear input fields after success
         contactForm.reset(); // Reset the form input fields
     }, () => {
-        // Show error message
-        contactMessage.textContent = 'Message not sent (service error)';
-
-        // Remove message after five seconds
-        setTimeout(() => {
-            contactMessage.textContent = '';
-        }, 5000);
+        // Show error popup
+        alert('Message not sent (service error). Please try again.');
     });
 };
 
 contactForm.addEventListener('submit', sendEmail);
+
 
 
 /*=============== SHOW SCROLL UP ===============*/
